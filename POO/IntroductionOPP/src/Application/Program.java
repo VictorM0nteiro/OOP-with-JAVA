@@ -5,7 +5,6 @@ import entities.Triangle;  //importando do pacote entities o Triangle
 import java.util.Locale;
 import java.util.Scanner;
 
-
 public class Program {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US); //Quando você
@@ -28,14 +27,12 @@ public class Program {
         y.b = sc.nextDouble();
         y.c = sc.nextDouble();
 
-        System.out.println(x.a + "," + x.b + "," + x.c);
-        System.out.println(y.a + "," + y.b + "," + y.c);
+        //System.out.println(x.a + "," + x.b + "," + x.c);
+        //System.out.println(y.a + "," + y.b + "," + y.c);
 
-        double p = (x.a + x.b + x.c) / 2.0;
-        double areaX = Math.sqrt(p * (p - x.a) * (p - x.b) * (p - x.c));
+        double areaX = x.area(); //chamando o metodo do triangle
 
-        p = (y.a + y.b + y.c) / 2.0;
-        double areaY = Math.sqrt(p * (p - y.a) * (p - y.b) * (p - y.c));
+        double areaY = y.area();// chamando o metodo do triangle
 
         System.out.printf("Triangle X area: %.4f%n", areaX); //printf is used
         // when printing floats doubles etc
